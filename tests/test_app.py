@@ -1,6 +1,13 @@
 # tests/test_app.py
 import unittest
-from app.app import add , subtract
+import sys
+import os
+
+# Add the 'app' directory to the Python module search path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../app')))
+
+# Now import the functions from app.py
+from app import add, subtract
 
 class TestApp(unittest.TestCase):
     def test_add(self):
